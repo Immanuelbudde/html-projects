@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+  </head>
+  <body>
+    <center>
+        <h1>Registration Form</h1>
+      <form action="http://127.0.0.1:5500/practice/Login.html" target="_blank">
+        <p>
+          <input type="text" placeholder="Enter your name" />
+        </p>
+        <p>
+          <input type="email" placeholder="Enter your email" />
+        </p>
+        <p>
+          <input type="password" placeholder="Enter your password" />
+        </p>
+        <p>
+          <label>Enter your date of birth</label>
+          <input type="date" />
+        </p>
+        <p>
+          <label>Enter your Mobile number</label>
+          <input type="tel" maxlength="10" />
+        </p>
+        <p>
+          <label>Upload your Resume</label>
+          <input type="file" />
+        </p>
+        <p>
+          <input type="radio" name="Gender" id="Immu" checked />
+          <label for="Immu">Male</label>
+          <br />
+          <input type="radio" name="Gender" id="Sai" />
+          <label for="Sai">Sai teja</label>
+        </p>
+        <p>
+          <label>Select your Subjects</label>
+          <br />
+
+          <input type="checkbox" id="python" />
+          <label for="python">Python</label>
+
+          <input type="checkbox" id="java" />
+          <label for="java">Java</label>
+
+          <input type="checkbox" id="html" />
+          <label for="html">HTML</label>
+        </p>
+
+        <select>
+          <option disabled selected>Select your Batch</option>
+          <option>28th Batch</option>
+          <option>29th Batch</option>
+          <option>30th Batch</option>
+        </select>
+
+        <br />
+
+        <input type="reset" />
+        <button>Submit</button>
+      </form>
+    </center>
+  </body>
+</html>
