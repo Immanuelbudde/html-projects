@@ -14,7 +14,7 @@ body{
       background-position: right;
       background:linear-gradient(to left,red,yellow,green,blue);
        background:linear-gradient(45deg,red,yellow);
-       background:radial-gradient(circle,red,yellow);
+       background:radial-gradient(circle,red,yellow,green,blue,pink);
        /* background:radial-gradient(ellipse at top left, red,black); */
 
       
