@@ -8,13 +8,20 @@
         .parent{
             border: 5px solid purple;
             width: 700px;
-            height: 250px;
+            height: 700px;
             display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
             /* justify-content: space-around; */
-            justify-content: space-between;
+            /* justify-content: space-between; */
             /* justify-content: center; */
             /* justify-content: flex-end; */
             /* align-items: center; */
+            /* align-content:space-between; */
+            /* align-content: center; */
+            align-content: space-around;
+            /* align-content: flex-end; */
+            /* align-content: flex-start; */
         }
         .child1{
             background-color: lightcoral;
@@ -38,6 +45,9 @@
       <div class="child1"></div>
       <div class="child2"></div>
       <div class="child3"></div>
+      <div class="child3"></div>
+      <div class="child2"></div>
+      <div class="child1"></div>
     </div>
   </body>
 </html>
