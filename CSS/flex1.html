@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main {
+        width: 500px;
+        height: 500px;
+        border: 5px solid purple;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+      }
+      .parent {
+        border: 5px solid burlywood;
+        width: 100px;
+        height: 100px;
+      }
+      #box1 {
+        background-color: lightblue;
+        /* order: 8;
+        flex-grow: 1; */
+        /* flex-shrink: 5; */
+      }
+      #box2 {
+        background-color: lightgreen;
+        /* order: 5;
+        flex-grow: 4; */
+        /* flex-shrink: 8; */
+      }
+      #box3 {
+        background-color: lightcoral;
+        /* order: 1;
+        flex-grow: 2; */
+        /* flex-shrink: 5;   */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div id="box1" class="parent">1-Immu</div>
+      <div id="box2" class="parent">2-Arun</div>
+      <div id="box3" class="parent">3-Teja</div>
+    </div>
+  </body>
+</html>
