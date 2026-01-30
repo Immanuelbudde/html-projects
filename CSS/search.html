@@ -6,31 +6,27 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        
-        .search-container{
-           /* border:1px solid black; */
-           box-shadow: 1px 1px 4px black;
-           width:50%;
-           margin:auto;
-           margin-top: 20%;
-           border-radius: 20px;
-           padding:12px
-
+        .search-bar{
+            border: 2px solid black;
+            width: 50%;
+            padding: 10px;
+            border-radius: 999px;
+            margin: auto;
+            margin-top: 20%;
         }
-        .input-container{
-            border:none;
-            outline:none;
-            width:80%;
-            font-size: 1rem;
+        input{
+            border: none;
+            outline: none;
+            width: 600px;
         }
     </style>
 </head>
 <body>
-    <div class="search-container">
+    <div class="search-bar">
         <i class="fa-solid fa-magnifying-glass"></i>
-        <input class="input-container" placeholder="search google or type URL">
+        <input type="text" placeholder="Search Google or type a URL">
         <i class="fa-solid fa-microphone"></i>
-        <i class="fa-solid fa-camera"></i>
+        <i class="fa-regular fa-camera"></i>
     </div>
 </body>
 </html>
