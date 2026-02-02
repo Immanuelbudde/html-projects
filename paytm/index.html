@@ -15,8 +15,20 @@
         .Navbar-main {
             display: flex;
             padding: 20px;
-            justify-content:space-evenly
+            justify-content:space-evenly;
+            align-items: center;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
         }
+        .navbar-links .sign-in{
+          border: none;
+          border-radius: 100px;
+          padding: 10px 20px;
+          background-color:#002970;
+          color:white;
+          margin-left: 20px;
+        }
+        .navbar-links .download{
+          color: #002970;
     </style>
   </head>
   <body>
@@ -42,11 +54,9 @@
           <option value="paytm for partner">Tickets Booking</option>
         </select>
       </div>
-      <div>
-          <i class="fa-solid fa-download"></i>
-          <a>Dowload App</a>
-          <i class="fa-solid fa-user"></i>
-          <a>Sign in</a>
+      <div class="navbar-links">
+          <a class="download"><i class="fa-solid fa-download"></i>Dowload App</a>
+          <a class="sign-in"><i class="fa-solid fa-user"></i>Sign in</a>
         </div>
     </div>
   </body>
