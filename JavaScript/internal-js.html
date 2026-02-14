@@ -1,0 +1,49 @@
+`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- internal JavaScript -->
+    <script>
+    console.log("This is an internal script.");
+    </script>
+
+    <!-- external JavaScript -->
+    <script src="external.js"></script>
+
+    <script>
+
+        // let immu //declaration
+        // immu=20000; //initialization
+
+        let immu=30000;
+        console.log(immu)
+
+        immu=40000;
+        console.log(immu) //reassinment yes possible
+        // let immu=50000; //re declaration not possible
+
+
+        const immuo="This is a constant variable."; //initialization and declaration at the same time
+
+        // const immuo="Trying to re-declare a constant variable."; //re declaration not possible
+
+        // immuo="Trying to reassign a constant variable."; //reassignment not possible
+
+        console.log(immuo)
+        
+
+        var age=25;
+        console.log(age)
+
+        var age=30; //re declaration possible
+        console.log(age)
+
+        age=35; //reassignment possible
+        console.log(age)
+    </script>
+</body>
+</html>
