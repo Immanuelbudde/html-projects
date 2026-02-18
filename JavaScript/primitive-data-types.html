@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //In this primitive data types, we can store only one value in a variable. They are immutable, which means that their values cannot be changed once they are assigned. They include the following types:
+        //number
+        let a=10;
+        let b=3.14;
+        console.log(Number.MAX_SAFE_INTEGER);
+        console.log(Number.MIN_SAFE_INTEGER);
+        console.log(999999999999999999); //16 digits
+
+        //string
+        let c="Hello, Guysssss";
+        console.log(c);
+
+        // console.log(typeof c);
+        console.log(c.toUpperCase());
+
+        //boolean
+        if(false){
+            console.log("This will not be executed");
+        }else{
+            console.log("This will be executed");
+        }
+
+        // null
+        let varshith_age=null;
+        console.log(varshith_age);
+
+        // undefined
+        let varshith_name;
+        console.log(varshith_name);
+        
+        let obj={
+            name:"sai"
+        }
+        console.log(obj.name);
+
+        //BigInt
+        let numb=99999999999999999999n;
+        console.log(numb);
+
+        //Symbol
+        // let sym="Immuo"
+        // let sym1="Immuo"
+        // console.log(sym==sym1);
+
+        let sym=Symbol("Immuo")
+        let sym1=Symbol("Immuo")
+        console.log(sym==sym1);
+    </script>
+</body>
+</html>
