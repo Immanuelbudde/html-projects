@@ -70,6 +70,25 @@
             }
         }
         person1.calling();
+
+        //call
+        let person2={
+            name:"Arunuoo"
+        }
+
+        function sayHello(place){
+            console.log("hello "+ this.name+" from "+place);
+            console.log(`hello ${this.name} from ${place}`);
+        }
+
+        sayHello.call(person2, "Hyderabad");
+
+        //apply
+        sayHello.call(person2, "Hyderabad");
+
+        //bind
+        let arun= sayHello.bind(person2, ["Hyderabad"])
+        arun();
     </script>
 </body>
 </html>
