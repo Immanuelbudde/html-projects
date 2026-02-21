@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //First way: object literal syntax
+        let person ={
+            name:"immu",
+            age:20,
+            gender:"male",
+            city:"Vijw"
+        }
+
+        console.log(person.name, person.age) //normal way
+        console.log(person["name"]) //bracket notation
+        console.log(person)
+
+        //creation-adding new property
+        person.class="JFS030"
+        console.log(person)
+
+        person.salary=100000
+        console.log(person)
+
+        //delete
+        delete person.class;
+        console.log(person)
+
+        //Keys
+        console.log(Object.keys(person))
+        console.log(Object.values(person))
+        console.log(Object.entries(person))
+
+        //array of Object
+        let d=[4,5,6]
+        let student=[
+            {name:"doopika", age:50, place:"Bihar"},
+            {name:"arunu", age:80, place:"Maharastra"},
+            {name:"Varshithh", age:10, place:"Assam"},
+        ]
+
+        console.log(student[0].name)
+
+        // for(let i=0; i<student.length; i++){
+        //     console.log(student)
+        // }
+
+        student.forEach(function(i){
+            console.log(i.name)
+        }
+        )
+
+        //2nd way: Object constructor
+        let students = new Object();
+        students.name="immuo";
+        students.age=23;
+        students.gender="Male";
+        console.log(students);
+
+        //this
+        let person1={
+            name:"Sai",
+            age:20,
+            calling:function(){
+                console.log(`${this.name}....Vintunnaraahhh......`);
+            }
+        }
+        person1.calling();
+    </script>
+</body>
+</html>
