@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let varshith="asdfZXCVBNMghjkl";
+        console.log(varshith);
+        console.log(varshith.length);
+        console.log(varshith.charAt(5));
+        console.log(varshith.toUpperCase());
+        console.log(varshith.toLowerCase());
+        console.log(varshith.indexOf("g"));
+        console.log(varshith.lastIndexOf("j"));
+        console.log(varshith.includes("j"));
+        console.log(varshith.includes("t"));
+
+        let immu=[4,5,6,3,1]
+        console.log(immu.join("-"));
+
+        let c=immu.join("_");
+        console.log(typeof(c));
+        console.log(c);
+        console.log(c.split("*"));
+
+        let h = 4456;
+        console.log(h)
+        console.log(h.toString()) //both toString and String work's same
+        console.log(String(h))
+
+        // let p = null;  //We can't define null in String or toString
+        // console.log(p.toString())
+        // console.log(String(p))
+
+        console.log(Math.random()*20)
+        console.log(Math.floor(4.9)) //It take priority for first digit only, it doesn't consider point after value
+        console.log(Math.ceil(4.1)) //It take priority for second digit and if it consists of any value after the point, it will increase one point
+        console.log(Math.floor((Math.random()*50)))
+        console.log(Math.ceil((Math.random()*50)))
+        console.log(Math.round(4.5))
+
+        console.log(Math.floor((Math.random()*(6)+1)))
+
+        console.log(Math.floor((Math.random()*(9000)+1000)))
+
+        let newDate = new Date()
+        console.log(newDate)
+
+        console.log(newDate.getFullYear())
+        console.log(newDate.getMonth()) //Months starts from 0 index so feb will print as 1
+        console.log(newDate.getDay())
+        console.log(newDate.getDate())
+
+        // console.log(`${}`)
+    </script>
+</body>
+</html>
