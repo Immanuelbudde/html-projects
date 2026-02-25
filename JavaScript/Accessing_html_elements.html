@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="calling()">Submit</button>
+    <input type="text" placeholder="Enter your name" id="user_name">
+    <input type="email" placeholder="Enter your email" id="user-email">
+    <button onclick="immu()">Submit</button>
+    <script>
+        function calling(){
+            console.log("Helloo Guyssss");
+        }
+
+        function immu(){
+            let name = document.getElementById("user_name").value
+            console.log(name)
+            let email = document.getElementById("user-email").value
+            console.log(email)
+        }
+    </script>
+</body>
+</html>
