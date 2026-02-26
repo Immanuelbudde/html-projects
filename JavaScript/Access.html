@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <button onclick="alertt()">Submit</button>
+
+    <script>
+        function alertt(){
+            console.log("Helloo guysss")
+        }
+    </script> -->
+
+    <input type="email" placeholder="Enter your email" id="email" />
+    <button onclick="arun()">Submit</button>
+    <button onclick="uma()">login</button>
+    <div id="arunn"></div>
+
+    <script>
+      function arun() {
+        let user = document.getElementById("email").value;
+        console.log(user);
+
+        document.getElementById("arunn").innerText=`Hello ${user}, how are you`
+      }
+
+      function uma(){
+        let user = document.getElementById("email").value;
+        document.getElementById("uma").innerHTML=`<h1 style="color:pink">Hello ${user}, How are youu</h1>`
+      }
+    </script>
+  </body>
+</html>
