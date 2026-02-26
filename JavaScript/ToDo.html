@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter student name" id="student">
+    <button onclick="AddStudent()">Add Student</button>
+
+    <ul id="studentList"></ul>
+
+    <script>
+        function AddStudent(){
+            let student_field=document.getElementById("student");
+
+            if(student_field.value==""){
+                alert("please,enter student name");
+                return false;
+            }
+
+            let existingStudents = getStudentsFromStorage();
+            console.log(existingStudents)
+
+            existingStudents.push(student_field.value);
+            console.log(existingStudents);
+
+            localStorage.setItem("Uma",JSON.stringify(existingStudents));
+
+            student_field.value="";
+
+            loadStudents()
+
+        }
+        function getStudentsFromStorage(){
+            let students = localStorage.getItem("Uma");
+            return students?JSON.parse(students):[];
+        }
+
+        function loadStudents(){
+            let studentList=document.getElementById("studentList")
+
+            let existingStudents=getStudentsFromStorage();
+
+            existingStudents.forEach(function(i,index){
+                console.log(i,index)
+            })
+        }
+    </script>
+</body>
+</html>
