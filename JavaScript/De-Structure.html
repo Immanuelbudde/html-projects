@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let student ={
+            name: "immuo",
+            age: 20,
+            place: "Vijayawada"
+        }
+
+        console.log(student.name, student.place)
+
+        let {name:studentname, age, place}=student
+        console.log(studentname)
+
+        let num=[10,20,30,40,50]
+        console.log(num[1]);
+
+        let [first, second, third, fourth, fifth]=num
+        console.log(first)
+    </script>
+</body>
+</html>
