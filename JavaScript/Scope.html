@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Scope: From where we can initialize/get the variable
+
+        //Global-Scope
+        let a=20; //Here, We are intialized outside the function and trying to get it outside the function. And we get the output so, It is called Global-Scope
+        function varshith(){
+            console.log(a);
+        }
+        varshith()
+
+        //Functional Scope
+        function mahitha(){
+            let b = "immuo";
+            const c = "arunuo";
+            var d = "teja"; //Var following the function rules so, Var is Functional Scope
+        }
+        mahitha()
+        // console.log(b)
+        // console.log(c)
+        // console.log(d)
+
+        // Block-Scope
+        {
+            let h = 9 //Let Following Block-Scope so, Let is a Block-Scope
+            const p = 89 //Const Following Block-Scope so, Const is a Block-Scope
+            var k = 90 //Var is not following Block-Scope so, Var is not a Block-scope
+        }
+        console.log(k)
+    </script>
+</body>
+</html>
