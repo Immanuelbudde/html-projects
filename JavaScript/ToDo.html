@@ -40,13 +40,32 @@
 
         function loadStudents(){
             let studentList=document.getElementById("studentList")
+            studentList.innerHTML="";
 
             let existingStudents=getStudentsFromStorage();
 
-            existingStudents.forEach(function(i,index){
-                console.log(i,index)
+            console.log(existingStudents);
+            existingStudents.forEach(function(i){
+                console.log(i);
+                let li = document.createElement("li");
+                studentList.appendChild(li);     
+                li.innerHTML=`${i} <button onclick="deleteStudents(${index})">Delete</button>`
             })
+
+            // existingStudents.forEach(function(i,index){
+            //     console.log(i,index);
+            //     let li = document.createElement("li");
+            //     li.innerHTML=`${i} <button>delete</button>`
+            //     studentList.append(li);
+            // })
         }
+        function deleteStudents(){
+            let existingStudents=getStudentsFromStorage();
+            existingStudents.splice(index, 1)
+            localStorage.setItem("uma", JSON.stringify(existingStudents))
+            loadStudents();
+        }
+
     </script>
 </body>
 </html>
