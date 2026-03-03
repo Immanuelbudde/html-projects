@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return validate()" action="https://www.amazon.in/">
+        <div>
+            <input type="text" placeholder="Enter your name" id="name">
+        </div>
+        <div>
+            <input type="email" placeholder="Enter your email" id="email">
+        </div>
+        <button>Submit</button>
+    </form>
+    <script>
+        function validate(){
+            let name = document.getElementById("name").value
+            let email = document.getElementById("email").value
+            let emailcheck = /^[a-z A-Z0-9._%+-]+@codegnan\.com$/
+            let namecheck = /^[a-z A-Z0-9]+$/
+            console.log(name)
+            if(name==""){
+                alert("Name Enter cheyvoyy")
+                return false
+            }
+            if(!name.match(namecheck)){
+                alert("Name must be including LowerCase, UpperCase, Numbers")
+                return false
+            }
+            if(!email.match(emailcheck)){
+                alert("Invalid email id")
+                return false
+            }
+            return true
+        }
+    </script>
+</body>
+</html>
