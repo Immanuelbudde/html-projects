@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //differences between normal and arrow functions
+        //1
+        function varshith1(){
+            console.log("arun");
+        }
+        varshith1();
+        let varshith = ()=>{
+            console.log("arun");
+        }
+        varshith();
+
+
+        //2
+        // let name="varshith";
+        const obj={
+            name:"teja",
+            normal:function(){
+                console.log(this.name);
+            },
+            arrow:()=>{
+                console.log(this.name);
+            }
+           
+        }
+        
+        console.log(obj.normal());  //this keyword in normal function : refers the object where the function is located
+        console.log(obj.arrow());  //this keyword in arrow function :refers the window object
+        
+        console.log(window.name);
+        var name="varshith";
+        //3
+        // in normal function using this aruguments object we can get the output array without passing the parameters
+        function test(){
+            console.log(arguments);
+        }
+        test(4,5,6,7,8);
+
+        //arguments pre-definied object is not work in arrow function
+       
+        // let arun=()=>{
+        //     console.log(arguments);
+        // }
+        // arun(4,5,6,7);
+
+        let arun=(...name)=>{
+            console.log(name);
+        }
+        arun(4,5,6,7);
+    </script>
+</body>
+</html>
