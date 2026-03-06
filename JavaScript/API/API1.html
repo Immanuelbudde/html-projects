@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getDoctor(){
+            fetch("https://doc-back.onrender.com/doctors", {
+                method:"GET"
+            })
+            .then((result)=>{ //response object, json text
+                console.log(result)
+                return result.json(); //json
+            })
+            .then((doopika)=>{ //access
+                console.log(doopika);
+                showDoctors(doopika)
+            })
+        }
+        function showDoctors(doopika){
+            doopika.map((i)=>{
+                console.log(i.name, i.salary)
+            })
+        }
+        getDoctor()
+    </script>
+</body>
+</html>
