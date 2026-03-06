@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=[4,5,6];
+        console.log(...a);   //spread operator  (to copy the array elements and to merge the elements)
+        let b=[...a];
+        console.log(b);
+
+        let d=[1,2];
+        let e=[4,5];
+
+        let varshith=[7,8,...d,...e];
+        console.log(varshith);
+
+        let emp={
+            name:"uma",
+            place:"vijayawada"
+        }
+
+        let shiva={...emp};
+        console.log(shiva);
+
+        //Rest operator   ---->uses in object destructing ,storing multiple values in one parameter
+
+        // function vimala(a,b,...rest){
+        function immu(...rest){
+            console.log(rest);
+        }
+        immu(5,6,45,67,89,89);
+
+        let employee={
+            name:"siva",
+            age:15,
+            place:"vijayawada"
+        }
+        // let{name,age,place}=employee;
+        let{name,...others}=employee;
+        console.log(others);
+        console.log(employee);
+    </script>
+</body>
+</html>
