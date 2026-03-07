@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict"
+
+        //positive or negative
+
+        console.log("Number is Positive or negative")
+
+        let number = Number(prompt("Enter the number"));
+
+        if(number > 0){
+            console.log("Number is positive");
+        }
+        else if(number < 0){
+            console.log("Number is negative");
+        }
+        else{
+            console.log("Number is zero");
+        }
+
+
+        //number even or odd
+
+        console.log("Even or Odd.......");
+
+        let numbers = Number(prompt("Enter the number for Even or Odd"));
+
+        if(numbers % 2 == 0){
+            console.log("Number is even");
+        }
+        else if(numbers % 2 != 0){
+            console.log("Number is odd");
+        }
+        else{
+            console.log("Not a Number");
+        }
+
+
+        //switch case
+
+        console.log("Switch case for alrams......");
+
+        let day = prompt("Enter Day");
+
+        switch(day){
+            case "monday":
+                console.log("Wake up at 6:00 AM");
+                break;
+            case "tuesday":
+                console.log("Wake up at 6:00 AM");
+                break;
+            case "wednesday":
+                console.log("Wake up at 6:00 AM");
+                break;
+            case "thursday":
+                console.log("Wake up at 6:00 AM");
+                break;
+            case "friday":
+                console.log("Wake up at 6:00 AM");
+                break;
+            case "saturday":
+                console.log("Wake up at 10:00 AM");
+                break;
+            case "sunday":
+                console.log("Wake up at 10:00 AM");
+                break;
+        }
+
+
+        //switch case for symblos
+
+        console.log("For Symbols")
+
+        let symbol = prompt("Enter a Symbol");
+        let a = 12;
+        let b = 6;
+
+        switch(symbol){
+            case "+":
+                console.log(a+b);
+                break;
+            case "-":
+                console.log(a-b);
+                break;
+            case "*":
+                console.log(a*b);
+                break;
+
+            case "/":
+                console.log(a/b);
+                break;
+            default:
+                console.log("Not a symbol");
+
+
+
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>
