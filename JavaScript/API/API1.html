@@ -4,9 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        #doctors{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            gap: 20px;
+        }
+        .card{
+            border: 4px solid black;
+            padding: 15px;
+        }
+    </style>
 </head>
 <body>
+    <div id="doctors"></div>
     <script>
+        // onload=function(){
+        //     getDoctor()
+        // }
         function getDoctor(){
             fetch("https://doc-back.onrender.com/doctors", {
                 method:"GET"
@@ -23,9 +39,30 @@
         function showDoctors(doopika){
             doopika.map((i)=>{
                 console.log(i.name, i.salary)
+
+            document.getElementById("doctors").innerHTML +=
+            `
+            <div class=card>
+                <p>${i.name}</p>
+                <p>${i.salary}</p>
+                <p>${i.age}</p>
+                <p>${i.gender}</p>
+                <p>${i.specialization}</p>
+                <button>Delete</button>
+            </div>
+            
+            `
+            });
+        }
+        
+        function deleteDoctor(id){
+            axios.delete(`https://doc-back.onrender.com/doctors/${id}`)
+            .then((result)=>{
+                console.log(result)
+                alert("Sucessfully deleted");
+                getDoctor()
             })
         }
-        getDoctor()
     </script>
 </body>
 </html>
