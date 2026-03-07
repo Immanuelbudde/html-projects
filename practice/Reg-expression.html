@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="https://www.amazon.in/">
+        <div>
+        <input type="password" placeholder="Enter password" id="password">
+    </div>
+    <button>Submit</button>
+    </form>
+    <script>
+        function check(){
+            let password = document.getElementById("password").value
+            let passwordcheck = /^[a-z0-9]+ \A-Z$/
+        }
+        if(!password.match(passwordcheck) && password.length>10){
+            alert("Invalid password")
+            return false
+        }
+        return true
+    </script>
+</body>
+</html>
