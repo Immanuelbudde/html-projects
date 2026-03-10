@@ -20,9 +20,9 @@
 <body>
     <div id="doctors"></div>
     <script>
-        // onload=function(){
-        //     getDoctor()
-        // }
+        onload=function(){
+            getDoctor()
+        }
         function getDoctor(){
             fetch("https://doc-back.onrender.com/doctors", {
                 method:"GET"
@@ -36,6 +36,7 @@
                 showDoctors(doopika)
             })
         }
+        // getDoctor()
         function showDoctors(doopika){
             doopika.map((i)=>{
                 console.log(i.name, i.salary)
@@ -48,12 +49,14 @@
                 <p>${i.age}</p>
                 <p>${i.gender}</p>
                 <p>${i.specialization}</p>
-                <button>Delete</button>
+                <button onclick="deleteDoctor(${i.id})">Delete</button>
+                <button onclick="updateDoctor('${i.id}','${i.name}','${i.salary}','${i.age}','${i.gender}','${i.specialization}')">Update</button>
             </div>
             
             `
             });
         }
+        
         
         function deleteDoctor(id){
             axios.delete(`https://doc-back.onrender.com/doctors/${id}`)
@@ -62,6 +65,32 @@
                 alert("Sucessfully deleted");
                 getDoctor()
             })
+        }
+
+        function updateDoctor(id,name,salary,gender,age,specialization){
+
+            let newName=prompt("Enter your name",name);
+            let newSalary=prompt("Enter your salary",salary);
+            let newGender=prompt("Enter your gender",gender);
+            let newAge=prompt("Enter your age",age);
+            let newSpecialization=prompt("Enter your specialization",specialization);
+
+            axios.put(`https://doc-back.onrender.com/doctors/${id}`,{
+                name:newName,
+                salary:newSalary,
+                gender:newGender,
+                age:newAge,
+                specialization:newSpecialization
+            })
+            .then((result)=>{
+                alert("Updated Successfully")
+
+            })
+            .catch((error)=>{
+                console.log(error)
+                alert("Updation failed")
+            })
+
         }
     </script>
 </body>
