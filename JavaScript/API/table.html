@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        table,tr,td{
+            border: 2px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+            background-color: darkkhaki
+        }
+    </style>
+</head>
+<body>
+    <table id="patients"></table>
+    <script>
+        onload=function(){
+            getPatients()
+        }
+
+        function getPatients(){
+            axios.get("https://doc-back.onrender.com/patients")
+            .then((result)=>{
+                console.log(result.data)
+                showPatients(result.data)
+            })
+        }
+
+        function showPatients(patient){
+            let patients_field=document.getElementById("patients")
+            patients_field.innerHTML+=`
+            
+            <tr>
+                <th>Name</th>
+                <th>Weight</th>
+                <th>Gender</th>
+                <th>Age</th>
+                <th>Disease</th>
+                <th>Doctor</th>
+                <th>Doctor specialization</th>
+            </tr>
+            `
+            patient.map((i)=>{
+                patients_field.innerHTML+=
+                `
+                <tr>
+                    <td>${i.name}</td>
+                    <td>${i.weight}</td>
+                    <td>${i.gender}</td>
+                    <td>${i.age}</td>
+                    <td>${i.disease}</td>
+                    <td>${i.doctor.name}</td>
+                    <td>${i.doctor.specialization}</td>
+                </tr>
+                `
+            })
+           
+        }
+    </script>
+</body>
+</html>
