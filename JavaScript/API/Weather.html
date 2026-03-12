@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />   
+<style>
+    body{
+        background-image: url("https://www-cdn.eumetsat.int/files/styles/16_9_large/public/2022-03/weather-lzone.jpg?h=d1cb525d&itok=bA0TVACl");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .container{
+        border: 2px solid black;
+        width: 30%;
+        height: 400px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        background-color: aliceblue;
+    }
+    .container input{
+        width: 300px;
+        height: 40px;
+        border-radius: 10px;
+    }
+    .container button{
+        width: 100px;
+        height: 40px;
+        border-radius: 999px;
+        border: none;
+        margin-top: 10px;
+        background-color: aqua;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            Weather Application
+        </h1>
+        <input type="text" placeholder="Enter your city" id="city">
+        <button onclick="get()">Search</button>
+
+        <div id="result">
+        </div>
+    </div>
+
+    <script>
+        async function get(){
+           let city =  document.getElementById("city").value;
+           if (city==""){
+            alert("plese enter city name");
+            return false
+           }
+           let apikey ="d6f60a25a4091c5fb75fe1dcef06d213"
+           let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`
+           try{
+            let response= await axios.get(url);
+            let data=response.data;
+            console.log(data)
+            document.getElementById("result").innerHTML = `
+
+            <h2>City<i class="fa-solid fa-city"></i>: ${data.name}</h2>
+            <h2>Temp<i class="fa-solid fa-temperature-half"></i>: ${data.main.temp}</h2>
+            <h2>Humidity<i class="fa-solid fa-droplet"></i>: ${data.main.humidity}</h2>
+            <h2>Wind<i class="fa-solid fa-wind"></i>: ${data.wind.speed}</h2>
+
+            `
+
+           }
+           catch{
+
+           }
+
+        }
+
+    </script>
+</body>
+</html>
