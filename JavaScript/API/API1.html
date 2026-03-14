@@ -62,8 +62,13 @@
             axios.delete(`https://doc-back.onrender.com/doctors/${id}`)
             .then((result)=>{
                 console.log(result)
-                alert("Sucessfully deleted");
-                getDoctor()
+                if(result.status==200){
+                    alert("Sucessfully deleted");
+                    getDoctor()
+                }
+                if(result.status==404){
+                    alert("Page not found");
+                }
             })
         }
 
