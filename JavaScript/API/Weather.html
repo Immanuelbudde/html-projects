@@ -74,10 +74,12 @@
             <h2>Wind<i class="fa-solid fa-wind"></i>: ${data.wind.speed}</h2>
 
             `
-
            }
            catch(error){
             console.log(error);
+            if(error.response.status==404){
+                document.getElementById("result").innerText="***City Not Found***"
+            }
             alert("Invalid city")
            }
 
